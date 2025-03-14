@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club of Millionaires</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <div class="nav-menu" id="nav-menu">
+        <ul>
+            <li onclick="showPage('main')">Main Page</li>
+            <li onclick="showPage('products')">Products</li>
+            <li onclick="showPage('faq')">FAQ</li>
+            <li onclick="showPage('telegram')">Telegram Group</li>
+        </ul>
+    </div>
+
+    <div id="main" class="page active">
+        <div class="main-background">
+            <div class="container">
+                <h1>WELCOME TO THE CLUB OF MILLIONAIRES!</h1>
+                <p class="welcome-text">This is the best website to buy carding products!<br>We provide an excellent opportunity to make big money for people from all over the world!</p>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <h3>01</h3>
+                        <p>Work with professionals<br>Our team has been working in this business since 2017. We select for our customers only high valid dumps CC</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>02</h3>
+                        <p>The best refund system<br>We use the most reliable checker CC Dumps. If the card does not work we make a refund.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>03</h3>
+                        <p>Daily Updates<br>We do updates every day. So you can always buy fresh products</p>
+                    </div>
+                </div>
+                <div class="features-section">
+                    <div class="feature">
+                        <h3>WORK WORLDWIDE</h3>
+                        <p>You can use prepaid cards at all ATMs in the world that accept VISA / Master Card / Union Pay cards and not associated with a bank</p>
+                    </div>
+                    <div class="feature">
+                        <h3>IT'S SAFE!</h3>
+                        <p>We send cards in the guise of greeting cards and gifts. In addition, prepaid cards are depersonalized</p>
+                    </div>
+                    <div class="feature">
+                        <h3>YOU CAN PAY</h3>
+                        <p>All cards have a card number and CVV, which makes it possible to use the card for online purchases.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>FREE EXPRESS SHIPPING</h3>
+                        <p>Delivery is already included in the card price We ship orders worldwide via courier services (DHL, FEDEX, etc.)</p>
+                    </div>
+                </div>
+                <div class="about-section">
+                    <h2>WHY CHOOSE US?</h2>
+                    <p>Since 2017, Club of Millionaires has been a trusted name in the carding industry, helping individuals worldwide achieve financial success. Our team of experienced professionals is dedicated to providing high-quality, valid dumps CC and prepaid cards that meet your needs. We prioritize customer satisfaction with daily updates, a reliable refund system, and secure, discreet shipping. Join thousands of satisfied customers who have made big money with us!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="products" class="page">
+        <div class="container">
+            <h1>OUR PRODUCTS</h1>
+            <div class="product-cards">
+                <div class="product-card">
+                    <img src="https://av.sc.com/gh/content/images/gh-visa-infinite-card-platinum-nw.jpg" alt="Visa Card 1" class="product-image">
+                    <h3>VISA - 1 CARD</h3>
+                    <p>Total Balance $450-650$</p>
+                    <p>$40</p>
+                    <button class="add-to-cart" onclick="addToCart('Visa - 1 Card', '$450-650$', '$40', this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://av.sc.com/gh/content/images/gh-visa-infinite-card-platinum-nw.jpg" alt="Visa Card 2" class="product-image">
+                    <h3>VISA - 1 CARD</h3>
+                    <p>Total Balance $900-1300$</p>
+                    <p>$80</p>
+                    <button class="add-to-cart" onclick="addToCart('Visa - 1 Card', '$900-1300$', '$80', this)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://av.sc.com/gh/content/images/Gold-Debit-Card.png" alt="Visa Card 3" class="product-image">
+                    <h3>VISA - 1 CARD</h3>
+                    <p>Total Balance $1800-3000$</p>
+                    <p>$120</p>
+                    <button class="add-to-cart" onclick="addToCart('Visa - 1 Card', '$1800-3000$', '$120', this)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="cart-section">
+                <h3>YOUR CART</h3>
+                <div id="cart-items"></div>
+                <div class="loading" id="cart-loading"></div>
+                <div class="cart-footer" id="cart-footer">
+                    <p id="total-price" class="total-price"></p>
+                    <p id="order-id" class="order-id"></p>
+                    <p class="instructions"><strong>"If you pay through PayPal, please enter your Order ID in the message when sending the payment, and ensure the money is sent via 'Friends and Family.'! If you pay with cryptocurrency, you must contact the Telegram account @matvajus to provide your Order ID and receive further instructions."</strong></p>
+                    <div class="payment-methods">
+                        <p><strong>Available Payment Methods: Paypal, Crypto, Stripe</strong></p>
+                    </div>
+                    <div class="payment-options">
+                        <button class="payment-btn" onclick="payWith('Paypal')">Pay with Paypal</button>
+                        <button class="payment-btn" onclick="payWith('Crypto')">Pay with Crypto</button>
+                        <button class="payment-btn" onclick="payWith('Stripe')">Pay with Stripe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="prepaid-info">
+                <h3>PREPAID CARDS</h3>
+                <p>Prepaid cards are simply a plastic alternative to carrying money. A prepaid card is not linked to a bank checking account or to a credit union share draft account. They are not a credit card so you can't run up debts on them.</p>
+                <p>They have the MasterCard/Visa/UnionPay logo on them so that you can spend with them anywhere that accepts these card scheme networks just like with a debit or credit card. You will have a PIN to enter when you withdraw cash or pay for items with the card.</p>
+                <p>Prepaid cards can also be used to shop online.</p>
+            </div>
+            <div class="disclaimer">
+                <p>Disclaimer: Cards with higher balances are coming soon!</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="faq" class="page">
+        <div class="container">
+            <h1>FREQUENTLY ASKED QUESTIONS</h1>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <h3>How do I use the cards?</h3>
+                    <p>Our prepaid cards can be used at any ATM or merchant worldwide that accepts VISA, MasterCard, or UnionPay. They come with a card number, CVV, and PIN for secure transactions. You can also use them for online purchases, just like a regular debit or credit card.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What is the refund policy?</h3>
+                    <p>We pride ourselves on offering the best refund system in the industry. If a card does not work, we use a reliable checker to verify the issue. Upon confirmation, we will issue a full refund or replace the card, ensuring your satisfaction.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How long does shipping take?</h3>
+                    <p>We offer free express shipping worldwide via trusted courier services like DHL and FedEx. Delivery typically takes 3-7 business days, depending on your location. Tracking information will be provided once your order is shipped.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are the cards safe to use?</h3>
+                    <p>Yes, our cards are completely safe. They are depersonalized and shipped discreetly in the guise of greeting cards or gifts to ensure privacy and security during delivery.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="telegram" class="page">
+        <div class="container">
+            <h1>TELEGRAM GROUP</h1>
+            <div class="telegram-section">
+                <p>Join our Telegram group for updates, support, and exclusive offers!</p>
+                <a href="https://t.me/+fx66DjpKISEwNzE0" target="_blank" class="telegram-link">Click here to join: https://t.me/+fx66DjpKISEwNzE0</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="notification-modal">
+        <div class="modal-content">
+            <p id="notification-message"></p>
+            <button onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Club of Millionaires. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
